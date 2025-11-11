@@ -26,13 +26,12 @@ export class UsersService {
     return this.usersRepository.find();
   }
 
-
   async getUserById(id: string) {
-    return this.usersRepository.findOne({where: {id: id}});
+    return this.usersRepository.findOne({ where: { id: id } });
   }
 
   async deleteUser(id: string) {
-    const existUser = await this.usersRepository.findOne({where: {id: id}})
+    const existUser = await this.usersRepository.findOne({ where: { id: id } });
     if (!existUser) {
       throw new BadRequestException('User with this id does not exist');
     }

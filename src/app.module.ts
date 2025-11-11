@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { UsersEntity } from './users/entity/users.entity';
+import { BooksModule } from './books/books.module';
 
 
 @Module({
@@ -18,6 +19,7 @@ import { UsersEntity } from './users/entity/users.entity';
       entities: [UsersEntity],
     }),
     UsersModule,
+    BooksModule,
 
   ],
 })
