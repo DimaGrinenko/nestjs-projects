@@ -22,7 +22,20 @@ export class UsersService {
     return this.usersRepository.save(user);
   }
 
-  async getUser() {
+  async getAllUsers() {
     return this.usersRepository.find();
+  }
+
+
+  async getUserById(id: string) {
+    return this.usersRepository.findOne({where: {id: id}});
+  }
+
+  async deleteUser(id: string) {
+    const existUser = await this.usersRepository.findOne({where: {id: id}})
+    if (!existUser) {
+      throw new BadRequestException('User with this id does not exist');
+    }
+    return this.usersRepository.delete(id);
   }
 }
