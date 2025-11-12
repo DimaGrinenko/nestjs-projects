@@ -2,7 +2,7 @@ import { IsNumber, IsString } from 'class-validator';
 
 export class CreateGenreDto {
   @IsNumber()
-  id: number;
+  id: string;
 
   @IsString()
   name: string;

@@ -11,20 +11,18 @@ export class UsersController {
     return this.usersService.createUser(createUsersDto);
   }
 
-
   @Get()
   async getAllUsers() {
-    return this.usersService.getAllUsers()
+    return this.usersService.getAllUsers();
   }
 
   @Get(':id')
   async getUserById(@Param('id') id: string) {
-    return this.usersService.getUserById(id)
-
+    return this.usersService.getUserById(id);
   }
+
   @Delete(':id')
   async deleteUser(@Param('id') id: string) {
-    return this.usersService.deleteUser(id)
+    return this.usersService.deleteUser(id);
   }
-
 }
