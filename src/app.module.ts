@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { UsersEntity } from './users/entity/users.entity';
 import { BooksModule } from './books/books.module';
+import { GenreModule } from './genre/genre.module';
 
 
 @Module({
@@ -20,6 +21,7 @@ import { BooksModule } from './books/books.module';
     }),
     UsersModule,
     BooksModule,
+    GenreModule,
 
   ],
 })
