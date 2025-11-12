@@ -4,6 +4,7 @@ import { UsersModule } from './users/users.module';
 import { UsersEntity } from './users/entity/users.entity';
 import { BooksModule } from './books/books.module';
 import { GenreModule } from './genre/genre.module';
+import { AuthorModule } from './author/author.module';
 
 
 @Module({
@@ -22,6 +23,7 @@ import { GenreModule } from './genre/genre.module';
     UsersModule,
     BooksModule,
     GenreModule,
+    AuthorModule,
 
   ],
 })
