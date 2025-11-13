@@ -1,8 +1,6 @@
-import { IsNumber, IsString } from 'class-validator';
+import { IsString } from 'class-validator';
 
-export class createAuthorDto {
-  @IsNumber()
-  id: number;
+export class CreateAuthorDto {
 
   @IsString()
   name: string;
