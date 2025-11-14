@@ -5,6 +5,7 @@ import { UsersEntity } from './users/entity/users.entity';
 import { BooksModule } from './books/books.module';
 import { GenreModule } from './genre/genre.module';
 import { AuthorModule } from './author/author.module';
+import { PublishersModule } from './publishers/publishers.module';
 
 
 @Module({
@@ -24,6 +25,7 @@ import { AuthorModule } from './author/author.module';
     BooksModule,
     GenreModule,
     AuthorModule,
+    PublishersModule,
 
   ],
 })
